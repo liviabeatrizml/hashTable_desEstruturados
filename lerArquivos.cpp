@@ -20,12 +20,12 @@ struct gps {
 cidade *getCidades(char *arquivo);
 gps *getGps(char *);
 
-int main() {
-    char *arquivo1 = (char *)"bancoDeDados/legenda.txt";
-    getCidades(arquivo1);
-    char *arquivo2 = (char *)"bancoDeDados/coordenadas.csv";
-    getCidades(arquivo2);
-}
+//int main() {
+//    char *arquivo1 = (char *)"bancoDeDados/legenda.txt";
+//    getCidades(arquivo1);
+//    char *arquivo2 = (char *)"bancoDeDados/coordenadas.csv";
+//    getGps(arquivo2);
+//}
 
 cidade *getCidades(char *arquivo) {
     FILE *f = fopen(arquivo, "r");
