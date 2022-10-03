@@ -1,28 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string>
+#include "cidade.cpp"
 #define MAX 5570
-
-typedef float latitude;
-typedef float longitude;
-
-struct cidade {
-    unsigned int id;
-    char *estado;
-    char *cidade;
-};
-
-struct gps {
-    unsigned int id;
-    latitude la;
-    longitude lo;
-};
-
-struct dataItem {
-    int key;
-    cidade city;
-    gps GPS;
-};
 
 dataItem *getItens(cidade *, gps *);
 void printDataItens(dataItem *);
@@ -33,15 +13,15 @@ gps *getGps(char *);
 char* remover(char* text);
 
 int main() {
-//    char *arquivo1 = (char *)"bancoDeDados/legenda.txt";
-//    cidade *todasCidades = getCidades(arquivo1);
-//
-//    char *arquivo2 = (char *)"bancoDeDados/coordenadas.csv";
-//    gps *locais = getGps(arquivo2);
-//    
-//    dataItem *d = getItens(todasCidades, locais);
-//    printDataItens(d);
-//    saveDataItens(d);
+    char *arquivo1 = (char *)"bancoDeDados/legenda.txt";
+    cidade *todasCidades = getCidades(arquivo1);
+
+    char *arquivo2 = (char *)"bancoDeDados/coordenadas.csv";
+    gps *locais = getGps(arquivo2);
+    
+    dataItem *d = getItens(todasCidades, locais);
+    printDataItens(d);
+    saveDataItens(d);
 }
 
 cidade *getCidades(char *arquivo) {
