@@ -18,7 +18,7 @@ struct gps {
 };
 
 cidade *getCidades(char *arquivo);
-gps *getGps(cidade *, char *, int);
+gps *getGps(char *);
 
 int main() {
     char *arquivo1 = (char *)"bancoDeDados/legenda.txt";
@@ -53,21 +53,21 @@ cidade *getCidades(char *arquivo) {
     return cidades;
 }
 
-gps *getGps(cidade *cidades, char *localizacoes) {
+gps *getGps(char *localizacoes) {
     FILE *f = fopen(localizacoes, "r");
     gps *local = (gps *)malloc(MAX * sizeof(gps));
     if (!f) {
         perror("Arquivo não existe");
         return NULL;
     }
-    fscanf(f, "CODIGO MUNICIPIO;UF;NOME MUNICIPIO");
+    fscanf(f, "CODIGO MUNICIPIO;LATITUDE;LONGITUDE");
     unsigned int cod;
     latitude la;
     longitude lo;
     int i = 0;
     while (!feof(f)) {
         fscanf(f, "%u;%f;%f", &cod, &la, &lo);
-        printf("%u;%f;%f\n", cod, la, lo);
+        printf("%u;%.2f;%.2f\n", cod, la, lo);
         local[i].id = cod;
         local[i].la = la;
         local[i].lo = lo;
