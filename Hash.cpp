@@ -34,6 +34,14 @@ int remover(hash H, dataItem *d, int (*funcHash)(dataItem *)) {
     return -1;
 }
 
+dataItem *buscar(hash H, int key, int (*funcHash)(dataItem *)){
+    dataItem *res = (dataItem*)malloc(sizeof(dataItem));
+    res->key = key;
+    int pos = funcHash(res);
+    res = H[pos];
+    return res;
+}
+
 int divisao(dataItem *d) {
     return d->key % SIZE;
 }
@@ -77,4 +85,5 @@ int main() {
     inserir(H, d, multiplicacao);
     remover(H, d, multiplicacao);
     inserir(H, d, multiplicacao);
+    dataItem* dt = buscar(H, 340940, multiplicacao);
 }
