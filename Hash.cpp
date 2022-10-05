@@ -13,13 +13,26 @@ void init(hash &H) {
 }
 int inserir(hash H, dataItem *d, int (*funcHash)(dataItem *)) {
     int key = funcHash(d);
+    dataItem *copy = (dataItem*)malloc(sizeof(dataItem));
+    *copy = *d;
     if (H[key] == 0) {
-        H[key] = d;
+        H[key] = copy;
         return 0;
     }
     return -1;
 }
 
+int remover(hash H, dataItem *d, int (*funcHash)(dataItem *)) {
+    int key = funcHash(d);
+    if (H[key] != 0) {
+        dataItem *purge = H[key];
+        delete purge;
+        // purge = 0;
+        H[key] = 0;
+        return 0;
+    }
+    return -1;
+}
 
 int divisao(dataItem *d) {
     return d->key % SIZE;
@@ -31,7 +44,7 @@ int multiplicacao(dataItem *d) {
     bigNumber key = (bigNumber)d->key;
     key *= key;
     int digits = ceil(log2((bigNumber)540000 * 540000));
-    int signif = ceil(log2(SIZE-1));
+    int signif = ceil(log2(SIZE - 1));
     int remover = digits - signif;
     int digitMask = (int)ceil(float(remover) / 2);
     bigNumber mask = ((SIZE-1) << digitMask);
@@ -59,8 +72,9 @@ int main() {
     init(H);
 
     inserir(H, d, divisao);
-    
-    //Não faz sentido mudar a função Hash, mas coloquei aqui para mostrar que é possível
-    
+
+    // Não faz sentido mudar a função Hash, mas coloquei aqui para mostrar que é possível
+    inserir(H, d, multiplicacao);
+    remover(H, d, multiplicacao);
     inserir(H, d, multiplicacao);
 }
