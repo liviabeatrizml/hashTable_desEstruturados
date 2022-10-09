@@ -1,5 +1,6 @@
 #include "Hash.cpp"
-int main() {
+
+void teste01() {
     dataItem *d = (dataItem *)malloc(sizeof(dataItem));
     d->city.cidade = (char *)"Pau dos Ferros";
     d->city.id = 340940;
@@ -19,5 +20,9 @@ int main() {
     inserir(H, d, multiplicacao);
     remover(H, d, multiplicacao);
     inserir(H, d, multiplicacao);
-    dataItem* dt = buscar(H, 340940, multiplicacao);
+    dataItem *dt = buscar(H, 340940, multiplicacao);
+}
+
+int main() {
+    teste01();
 }
