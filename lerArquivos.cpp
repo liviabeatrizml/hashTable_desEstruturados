@@ -12,17 +12,17 @@ cidade *getCidades(char *arquivo);
 gps *getGps(char *);
 char* remover(char* text);
 
-int main() {
-    char *arquivo1 = (char *)"bancoDeDados/legenda.txt";
-    cidade *todasCidades = getCidades(arquivo1);
+// int main() {
+//     char *arquivo1 = (char *)"bancoDeDados/legenda.txt";
+//     cidade *todasCidades = getCidades(arquivo1);
 
-    char *arquivo2 = (char *)"bancoDeDados/coordenadas.csv";
-    gps *locais = getGps(arquivo2);
+//     char *arquivo2 = (char *)"bancoDeDados/coordenadas.csv";
+//     gps *locais = getGps(arquivo2);
     
-    dataItem *d = getItens(todasCidades, locais);
-    printDataItens(d);
-    saveDataItens(d);
-}
+//     dataItem *d = getItens(todasCidades, locais);
+//     printDataItens(d);
+//     saveDataItens(d);
+// }
 
 cidade *getCidades(char *arquivo) {
     FILE *f = fopen(arquivo, "r");
