@@ -1,4 +1,5 @@
 #include "Hash.cpp"
+#include "lerArquivos.cpp"
 
 void teste01() {
     dataItem *d = (dataItem *)malloc(sizeof(dataItem));
@@ -23,6 +24,19 @@ void teste01() {
     dataItem *dt = buscar(H, 340940, multiplicacao);
 }
 
+void inserirTodos(){
+    cidade *todasCidades = getCidades((char*)"bancoDeDados/legenda.txt");
+    gps *todoLocal = getGps((char*)"bancoDeDados/coordenadas.csv");
+    dataItem* d = getItens(todasCidades, todoLocal);
+    hash H;
+    init(H);
+    int colisao = 0;
+    for(int i=0; i<MAX; i++){
+        colisao += -1*inserir(H, d+i, multiplicacao);
+    }
+}
+
 int main() {
-    teste01();
+    //teste01();
+    inserirTodos(); //Tentativa de inserção
 }
