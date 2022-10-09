@@ -1,3 +1,6 @@
+#ifndef HASH_CPP
+#define HASH_CPP
+
 #include "cidade.cpp"
 #include <math.h>
 #include <stdio.h>
@@ -26,8 +29,8 @@ int remover(hash H, dataItem *d, int (*funcHash)(dataItem *)) {
     int key = funcHash(d);
     if (H[key] != 0) {
         dataItem *purge = H[key];
-        delete purge;
-        // purge = 0;
+        delete purge; //linux
+        // free(purge); //windows
         H[key] = 0;
         return 0;
     }
@@ -60,30 +63,4 @@ int multiplicacao(dataItem *d) {
     key = (key >> digitMask);
     return key;
 }
-
-int hashCodeDobra(dataItem *d) {
-    return d->key % SIZE;
-}
-
-int main() {
-    dataItem *d = (dataItem *)malloc(sizeof(dataItem));
-    d->city.cidade = (char *)"Pau dos Ferros";
-    d->city.id = 340940;
-    d->city.estado = (char *)"RN";
-    d->key = 340940;
-    d->GPS.id = 340940;
-    d->GPS.la = -6.11;
-    d->GPS.lo = -38.2;
-
-    int res = multiplicacao(d);
-    hash H;
-    init(H);
-
-    inserir(H, d, divisao);
-
-    // Não faz sentido mudar a função Hash, mas coloquei aqui para mostrar que é possível
-    inserir(H, d, multiplicacao);
-    remover(H, d, multiplicacao);
-    inserir(H, d, multiplicacao);
-    dataItem* dt = buscar(H, 340940, multiplicacao);
-}
+#endif
