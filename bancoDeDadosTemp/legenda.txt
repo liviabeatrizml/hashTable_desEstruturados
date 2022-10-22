@@ -1,0 +1,11 @@
+CODIGO MUNICIPIO;UF;NOME MUNICIPIO
+431041 RS Inhacorá
+110001 RO Alta Floresta d`Oeste
+430781 RS Estrela Velha
+110002 RO Ariquemes
+110003 RO Cabixi
+110005 RO Cerejeiras
+110006 RO Colorado do Oeste
+430047 RS Almirante Tamandaré do Sul
+110008 RO Costa Marques
+110004 RO Cacoal
