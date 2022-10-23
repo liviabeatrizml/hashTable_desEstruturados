@@ -108,10 +108,9 @@ int dobra(dataItem *d) {
 }
 
 int inserir(hash H, dataItem *d, int (*funcHash)(dataItem *)) {
-    unsigned int key, cont;
+    unsigned int key;
     
     key = funcHash(d);
-    cont = 0;
 
     dataItem *copy = (dataItem*)malloc(sizeof(dataItem));
     *copy = *d;
