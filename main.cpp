@@ -7,7 +7,7 @@ int main(){
     inserirTodos(H);
 
     remover(H, buscar(H, 110001, divisao), divisao);
-    buscar(H, 110004, divisao);
+    // buscar(H, 143004, divisao);
 
     // dataItem *d = (dataItem *)malloc(sizeof(dataItem));
     // d->city.cidade = (char *)"São João do Rio do Peixe";

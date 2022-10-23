@@ -186,6 +186,8 @@ int remover(hash H, dataItem *d, int (*funcHash)(dataItem *)) {
             
             inserir(H, createDummy(), funcHash);
 
+            printf("\n\tCidade removida com sucesso!\n\n");
+
             return 0;
         }
 
@@ -205,7 +207,7 @@ dataItem *buscar(hash H, int key, int (*funcHash)(dataItem *)){
         if (H[pos]->key == key) {
             res = H[pos];
             
-            printf("Cidade encontrada com sucesso!\n\n");
+            printf("\n\tCidade encontrada com sucesso!\n\n");
             printDataItens(res);
 
             return res;
@@ -213,7 +215,7 @@ dataItem *buscar(hash H, int key, int (*funcHash)(dataItem *)){
         pos++;  
     }
 
-    printf("Cidade não encontrada!\n\n");
+    printf("\n\tCidade nao encontrada!\n\n");
 }
 
 void inserirTodos(hash H){
