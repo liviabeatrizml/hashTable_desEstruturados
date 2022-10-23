@@ -204,11 +204,16 @@ dataItem *buscar(hash H, int key, int (*funcHash)(dataItem *)){
     while (H[pos] != NULL){
         if (H[pos]->key == key) {
             res = H[pos];
+            
+            printf("Cidade encontrada com sucesso!\n\n");
+            printDataItens(res);
+
             return res;
         }
-
         pos++;  
     }
+
+    printf("Cidade não encontrada!\n\n");
 }
 
 void inserirTodos(hash H){

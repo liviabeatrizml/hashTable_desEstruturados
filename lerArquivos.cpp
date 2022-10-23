@@ -71,17 +71,15 @@ gps *getGps(char *localizacoes) {
 }
 
 void printDataItens(dataItem *dados) {
-    for (int i = 0; i < MAX; i++) {
-        printf("\t- - - - - - - - - - - - - - - - - - - - - - - - -\n\tNumero: %d \t\tIdentificador: %d\n\tEstado: %s\t\tCidade: %s\n\tLatitude: %.2f\tLongitude: %.2f\n\t- - - - - - - - - - - - - - - - - - - - - - - - -\n\n", i, dados[i].key, dados[i].city.estado, dados[i].city.cidade, dados[i].GPS.la, dados[i].GPS.lo);
-    }
+    printf("\t- - - - - - - - - - - - - - - - - - - - - - - - -\n\tIdentificador: %d\n\tEstado: %s\t\tCidade: %s\n\tLatitude: %.2f\tLongitude: %.2f\n\t- - - - - - - - - - - - - - - - - - - - - - - - -\n\n", dados->key, dados->city.estado, dados->city.cidade, dados->GPS.la, dados->GPS.lo);
+    
 }
 
 void saveDataItens(dataItem *dados){
     FILE *f = fopen("dados.dat", "w");
     
-    for (int i = 0; i < MAX; i++) {
-        fprintf(f, "%d %d %s %.2f %.2f %s", i, dados[i].key, dados[i].city.estado, dados[i].GPS.la, dados[i].GPS.lo, dados[i].city.cidade);
-    }
+    fprintf(f, "%d %s %.2f %.2f %s", dados->key, dados->city.estado, dados->GPS.la, dados->GPS.lo, dados->city.cidade);
+    
 }
 
 dataItem *getItens(cidade *cities, gps *local) {
