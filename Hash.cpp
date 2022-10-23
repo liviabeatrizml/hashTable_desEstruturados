@@ -227,7 +227,7 @@ void inserirTodos(hash H){
     int colisao = 0;
 
     for(int i = 0; i < MAX; i++){
-        colisao += -1 * inserir(H, d+i, divisao);
+        colisao += -1 * inserir(H, d+i, dobra);
     }
 
     // printf("Colisoes: %d", colisao);

@@ -6,7 +6,7 @@ int main(){
 
     inserirTodos(H);
 
-    remover(H, buscar(H, 110001, divisao), divisao);
+    // remover(H, buscar(H, 110001, divisao), divisao);
     // buscar(H, 143004, divisao);
 
     // dataItem *d = (dataItem *)malloc(sizeof(dataItem));
