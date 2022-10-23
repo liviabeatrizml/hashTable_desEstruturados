@@ -18,23 +18,6 @@ dataItem *createDummy(){
     dummy->key = -1;
 }
 
-    /* ESTRUTURA DE ENDEREÇAMENTO ENCADEADO (No formato de lista e árvore)
-
-        typedef struct hashEncadeadoList {
-            dataItem city;
-            struct hashEncadeadoList* prox;
-
-        } NoList;
-        
-        typedef struct hashEncadeadoArv {
-            dataItem city;
-            struct hashEncadeadoArv* esq;
-            struct hashEncadeadoArv* dir;
-
-        } NoArv;
-
-    */
-
 void init(hash &H) {
     for (int i = 0; i < SIZE; i++) {
         H[i] = NULL;
@@ -125,7 +108,7 @@ int dobra(dataItem *d) {
 }
 
 int inserir(hash H, dataItem *d, int (*funcHash)(dataItem *)) {
-    int key, cont;
+    unsigned int key, cont;
     
     key = funcHash(d);
     cont = 0;
@@ -135,12 +118,25 @@ int inserir(hash H, dataItem *d, int (*funcHash)(dataItem *)) {
 
     key = key > SIZE ? key % SIZE : key;
 
-    if (H[key] == NULL || H[key]->key == -1) {
+    if (H[key] == NULL) {
         H[key] = copy;
         return 0;
     }
 
     // Endereçamento ABERTO
+
+            ///* TRATAMENTO SEQUENCIAL ou LINEAR
+
+    while (H[key] != NULL){
+        key++;
+
+        if (H[key] == NULL || H[key]->key == -1) {
+            H[key] = copy;
+            return 0;
+        }  
+    }
+
+    //*/
 
         /* TRATAMENTO DUPLO-HASH
 
@@ -173,31 +169,6 @@ int inserir(hash H, dataItem *d, int (*funcHash)(dataItem *)) {
 
             i++;  
         }
-
-    */
-
-        ///* TRATAMENTO SEQUENCIAL ou LINEAR
-
-        while (H[key] != NULL){
-            key++;
-
-            if (H[key] == NULL) {
-                H[key] = copy;
-                return 0;
-            }  
-        }
-
-    //*/
-
-    // Endereçamento ENCADEADO
-
-        /* MÉTODO EXTERIOR e INTERIOR
-
-        Será necessário alterar a estrutura da HASH? Criar um struch?       ... Sobre interior
-
-        Será necessário alterar a estrutura do dataItem (cidade.cpp),
-        adicionando um novo parametro ponteiro que irá apontar para a       ... Sobre exterior
-        possível cidade que estará no mesmo local na tabela?
 
     */
 
