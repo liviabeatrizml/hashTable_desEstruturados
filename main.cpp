@@ -1,32 +1,24 @@
 #include "Hash.cpp"
-#include "lerArquivos.cpp"
-
-void inserirTodos();
 
 int main(){
-    inserirTodos();
-
-    return 0;
-}
-
-void inserirTodos(){
-    cidade *allCity = getCidades((char*)"bancoDeDadosTemp/legenda.txt");
-    gps *allLocal = getGps((char*)"bancoDeDadosTemp/coordenadas.csv");
-
-    dataItem* d = getItens(allCity, allLocal);
-
     hash H;
     init(H);
 
-    int colisao = 0;
-
-    for(int i = 0; i < MAX; i++){
-        colisao += -1 * inserir(H, d+i, divisao);
-    }
-
-    // printf("Colisoes: %d", colisao);
+    inserirTodos(H);
 
     remover(H, buscar(H, 110001, divisao), divisao);
+    buscar(H, 120001, divisao);
 
-    buscar(H, 430781, divisao);
+    // dataItem *d = (dataItem *)malloc(sizeof(dataItem));
+    // d->city.cidade = (char *)"Alta Floresta d`Oeste";
+    // d->city.id = 110001;
+    // d->city.estado = (char *)"RO";
+    // d->key = 110001;
+    // d->GPS.id = 110001;
+    // d->GPS.la = -11.92;
+    // d->GPS.lo = -61.99;
+
+    // inserir(H, d, divisao);
+
+    return 0;
 }

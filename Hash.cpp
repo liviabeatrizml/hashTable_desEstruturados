@@ -1,7 +1,7 @@
 #ifndef HASH_CPP
 #define HASH_CPP
 
-#include "cidade.cpp"
+#include "lerArquivos.cpp"
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -210,6 +210,21 @@ dataItem *buscar(hash H, int key, int (*funcHash)(dataItem *)){
 
         pos++;  
     }
+}
+
+void inserirTodos(hash H){
+    cidade *allCity = getCidades((char*)"bancoDeDadosTemp/legenda.txt");
+    gps *allLocal = getGps((char*)"bancoDeDadosTemp/coordenadas.csv");
+
+    dataItem* d = getItens(allCity, allLocal);
+
+    int colisao = 0;
+
+    for(int i = 0; i < MAX; i++){
+        colisao += -1 * inserir(H, d+i, divisao);
+    }
+
+    // printf("Colisoes: %d", colisao);
 }
 
 #endif
