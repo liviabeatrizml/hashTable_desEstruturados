@@ -1,7 +1,7 @@
 CODIGO MUNICIPIO;UF;NOME MUNICIPIO
 431041 RS Inhacorá
 110001 RO Alta Floresta d`Oeste
-430781 RS Estrela Velha
+120001 AC Acrelândia
 110002 RO Ariquemes
 110003 RO Cabixi
 110005 RO Cerejeiras
