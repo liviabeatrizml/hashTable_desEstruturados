@@ -7,16 +7,16 @@ int main(){
     inserirTodos(H);
 
     remover(H, buscar(H, 110001, divisao), divisao);
-    buscar(H, 120001, divisao);
+    buscar(H, 110004, divisao);
 
     // dataItem *d = (dataItem *)malloc(sizeof(dataItem));
-    // d->city.cidade = (char *)"Alta Floresta d`Oeste";
-    // d->city.id = 110001;
-    // d->city.estado = (char *)"RO";
-    // d->key = 110001;
-    // d->GPS.id = 110001;
-    // d->GPS.la = -11.92;
-    // d->GPS.lo = -61.99;
+    // d->city.cidade = (char *)"São João do Rio do Peixe";
+    // d->city.id = 250070;
+    // d->city.estado = (char *)"RN";
+    // d->key = 250070;
+    // d->GPS.id = 250070;
+    // d->GPS.la = -6.72;
+    // d->GPS.lo = -38.44;
 
     // inserir(H, d, divisao);
 
