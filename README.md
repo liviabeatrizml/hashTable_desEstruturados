@@ -8,7 +8,9 @@
 
 
 ## Hash Table (Tabela de Dispersão)
-> Uma Tabela de Dispersão ou Hash é uma estrutura de dados, semelhante a vetor de elementos, que associa seus elementos chaves específicas para facilitar na sua busca, no entanto, essa tabela também diz respeito à inserção e remoção de elementos da tabela. A utilização dessa estrutura tem como propósito de ter uma busca de dados constante (complexidade O(1)), mas isso nem sempre é possível devido haver colisões no momento de inserção de diversos elementos na tabela.
+> Uma Tabela de Dispersão ou Hash é uma estrutura de dados, semelhante a vetor de elementos, que associa seus dados a chaves específicas para facilitar na sua busca. Por meio dessa tabela também torna-se possível inserir e remover os elementos nela contidos. A utilização da estrutura hash tem como propósito fundamental realizar busca de dados de maneira constante (complexidade O(1)), mas isso nem sempre é possível, pois no momento de inserção de diversos elementos na tabela há grandes chances de haver colisões, o que altera a complexidade para O(n), semelhante a de uma lista.   
+
+Baseado no estudo da Tabela de Dispersão, bem como em sua utilização em linguagem C++, implementou-se uma pasta contendo os arquivos necessários para buscar, inserir e remover cidades brasileiras baseadas nas localidades. Nesse sentido, a fim de tratar as possíveis colisões previstas, visto a gama de municípios, fez-se o uso do endereçamento aberto através da sondagem linear. Dessa forma, o espaço fica alocado de uma forma eficiente. No entanto, a sondagem linear, uma vez que procura adicionar um elemento na primeira posição livre seguinte, também prejudica o desempenho da busca quando se elimina um determinado elemento, mas esse problema pode ser resolvido. 
 
  -  Alteração no código pré-determinado pelo professor
 	-   Arquivos não alterados
