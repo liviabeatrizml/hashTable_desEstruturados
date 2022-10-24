@@ -29,9 +29,9 @@ Baseado no estudo da Tabela de Dispersão, bem como em sua utilização em lingu
 -   Ao invés de utilizarmos o banco de dados disponibilizado pelo professor que contém cerca de 5570 cidades para fazermos os testes das aplicações, criamos um segundo banco de dados contendo apenas 10 cidades escolhidas a dedo.  
 -   As cidades escolhidas para fazermos os testes, se encaixam em todas as situações que o nosso código promete resolver, seja inserir, remover ou buscar cidades na tabela HASH, ou até mesmo tratar colisões no momento de inserção de elementos.
 </br>
-![BancoDeDados](components/bancoDeDados_01.png)
+![BancoDeDados](/components/bancoDeDados_01.png)
 </br>
-![BancoDeDados](components/bancoDeDados_02.png)
+![BancoDeDados](/components/bancoDeDados_02.png)
 </br>
 
 #### lerArquivos.cpp    
