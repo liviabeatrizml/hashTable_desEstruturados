@@ -50,7 +50,7 @@ int inverte(int num){
 }
 
 int somaR(int num1, int num2){    
-    return ((num1 / 10) + (num2 / 10) * 10) + (num1 % 10) + (num2 % 10);
+    return (num1 - ((num1 /10)* 10)) + (num2 - ((num2 /10)* 10)) + ((num1 / 10) + (num2 / 10)) * 10;
 }
 
 int divisao(dataItem *d) {
