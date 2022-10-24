@@ -18,7 +18,7 @@ Baseado no estudo da Tabela de Dispersão, bem como em sua utilização em lingu
 	    -   cidade.cpp - Não alteramos nada nesse arquivo para mantermos a mesma estrutura dada pelo professor.
 	-   Arquivos alterados
 		-   bancoDeDadosTemp - Organizamos um banco de dados menor contendo apenas informações de algumas cidades para facilitar os testes;
-		-   lerArquivos.cpp - Alterações a forma que os dados do banco de dados são apresentados com o printf no terminal;
+		-   lerArquivos.cpp - Alterações a forma que os dados do banco de dados são apresentados com o **printf** no terminal;
 		-   Hash.cpp - Criamos novas funções para a aplicação um novo método de inserção de elementos na tabela e tratamento de colisões;
 		-   main.cpp - Modificamos o arquivo para adicionar todas as cidades na tabela Hash.
 
@@ -44,6 +44,6 @@ Baseado no estudo da Tabela de Dispersão, bem como em sua utilização em lingu
 - No arquivo Hash.cpp criamos funções necessária para a implementação de um novo método de inserção de elementos na Tabela Hash, a DOBRA, e também atualizamos todas as funções para se adequar a forma de tratamento de colisão de maneira aberta, a SONDAGEM LINEAR.
 
 ##### contagem(int num)
-- Função que realiza a contagem dos valores a serem manipulados na função dobra. Enquanto o num (correspondente à key) for diferente de zero haverá a divisão por dez, com o incremento da variável cont, responsável por fazer a contagem dos elementos.
+- Função que realiza a contagem dos valores a serem manipulados na função dobra. Enquanto o **num** (correspondente à **key**) for diferente de zero haverá a divisão por dez, com o incremento da variável **cont**, responsável por fazer a contagem dos elementos.
 ![Contagem](components/contagem_01.png)
 >Ou seja, para o exemplo do número relativo a key “431041” será realizado a divisão inteira sucessiva por dez (431041/10; 43104/10, 4310/10; …) até o final da contagem dos algarismos.
