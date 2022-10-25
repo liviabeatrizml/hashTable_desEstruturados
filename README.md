@@ -31,6 +31,8 @@ Baseado no estudo da Tabela de Dispersão, bem como em sua utilização em lingu
 
 ![BancoDeDados](components/bancoDeDados_01.png)
 
+##
+
 #### lerArquivos.cpp    
 > Mantemos basicamente as mesmas coisas presentes no código original vindo do professor, somente alteramos as funções de apresentação de dados.
 
