@@ -32,19 +32,22 @@ Baseado no estudo da Tabela de Dispersão, bem como em sua utilização em lingu
 ![BancoDeDados](components/bancoDeDados_01.png)
 
 ##
-
 #### lerArquivos.cpp    
 > Mantemos basicamente as mesmas coisas presentes no código original vindo do professor, somente alteramos as funções de apresentação de dados.
 
+###
 ##### printDataItens(dataItem *dados)
 -   Para a exposição dos dados e apresentação mais coerente e visível das informações, foi feito a função printDataItens que irá dispor das informações “Identificador, Estado, Cidade, Latitude e Longitude” no terminal de maneira apresentável e identificável, na qual é passado como parâmetros os dados do arquivo .txt
 
+##
 ##### saveDataItens(dataItem *dados)
 - A função saveDataItens irá salvar as informações organizadas em um arquivo .txt, como uma forma de um arquivo auxiliar. Foi pelo foden(“dados.dat”, “w”) que os dados foram escritos e direcionados.
 
+##
 #### Hash.cpp    
 - No arquivo Hash.cpp criamos funções necessária para a implementação de um novo método de inserção de elementos na Tabela Hash, a DOBRA, e também atualizamos todas as funções para se adequar a forma de tratamento de colisão de maneira aberta, a SONDAGEM LINEAR.
 
+##
 ##### contagem(int num)
 - Função que realiza a contagem dos valores a serem manipulados na função dobra. Enquanto o **num** (correspondente à **key**) for diferente de zero haverá a divisão por dez, com o incremento da variável **cont**, responsável por fazer a contagem dos elementos.
 ![Contagem](components/contagem_01.png)
