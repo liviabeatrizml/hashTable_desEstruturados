@@ -4,10 +4,10 @@ int main(){
     hash H;
     init(H);
 
-    inserirTodos(H);
+    inserirTodos(H, divisao);
 
-    // remover(H, buscar(H, 110001, divisao), divisao);
-    // buscar(H, 143004, divisao);
+    remover(H, buscar(H, 110001, divisao), divisao);
+    buscar(H, 120001, divisao);
 
     // dataItem *d = (dataItem *)malloc(sizeof(dataItem));
     // d->city.cidade = (char *)"São João do Rio do Peixe";

@@ -179,12 +179,7 @@ int remover(hash H, dataItem *d, int (*funcHash)(dataItem *)) {
 
     while (H[key] != NULL){
         if(H[key]->key == d->key){
-            dataItem *purge = H[key];
-
-            free(purge);     //windows
-            // delete purge; //linux
-            
-            inserir(H, createDummy(), funcHash);
+            H[key] = createDummy();
 
             printf("\n\tCidade removida com sucesso!\n\n");
 
@@ -218,7 +213,7 @@ dataItem *buscar(hash H, int key, int (*funcHash)(dataItem *)){
     printf("\n\tCidade nao encontrada!\n\n");
 }
 
-void inserirTodos(hash H){
+void inserirTodos(hash H, int (*funcHash)(dataItem *)){
     cidade *allCity = getCidades((char*)"bancoDeDadosTemp/legenda.txt");
     gps *allLocal = getGps((char*)"bancoDeDadosTemp/coordenadas.csv");
 
@@ -227,7 +222,7 @@ void inserirTodos(hash H){
     int colisao = 0;
 
     for(int i = 0; i < MAX; i++){
-        colisao += -1 * inserir(H, d+i, dobra);
+        colisao += -1 * inserir(H, d+i, funcHash);
     }
 
     // printf("Colisoes: %d", colisao);
