@@ -4,7 +4,11 @@ int main(){
     hash H;
     init(H);
 
+    // ocupadoTabela(H);
+
     inserirTodos(H, divisao);
+
+    // ocupadoTabela(H);
 
     remover(H, buscar(H, 110001, divisao), divisao);
     buscar(H, 120001, divisao);

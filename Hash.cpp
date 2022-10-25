@@ -6,7 +6,7 @@
 #include <stdlib.h>
 #include <math.h>
 
-#define SIZE 40
+#define SIZE 5570
 #define divs 2
 
 typedef dataItem *hash[SIZE];
@@ -17,6 +17,18 @@ dataItem *createDummy(){
     
     dummy->key = -1;
 }
+
+// void ocupadoTabela(hash &H){
+//     int i, cont = 0;
+//    
+//     for (i = 0; i < MAX; i++){
+//         if(H[i] != NULL && H[i]->key != -1){
+//             cont++;
+//         }
+//     }
+//    
+//     printf("\n\t- %d posicoes da tabela ocupada, ou %d%%!!!\n\n", cont, (cont/MAX)*100);
+// }
 
 void init(hash &H) {
     for (int i = 0; i < SIZE; i++) {
@@ -133,6 +145,10 @@ int inserir(hash H, dataItem *d, int (*funcHash)(dataItem *)) {
             H[key] = copy;
             return 0;
         }  
+
+        if(key == MAX){
+            key = key % MAX;
+        }
     }
 
     //*/
@@ -214,8 +230,8 @@ dataItem *buscar(hash H, int key, int (*funcHash)(dataItem *)){
 }
 
 void inserirTodos(hash H, int (*funcHash)(dataItem *)){
-    cidade *allCity = getCidades((char*)"bancoDeDadosTemp/legenda.txt");
-    gps *allLocal = getGps((char*)"bancoDeDadosTemp/coordenadas.csv");
+    cidade *allCity = getCidades((char*)"bancoDeDados/legenda.txt");
+    gps *allLocal = getGps((char*)"bancoDeDados/coordenadas.csv");
 
     dataItem* d = getItens(allCity, allLocal);
 

@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string>
 #include "cidade.cpp"
-#define MAX 10
+#define MAX 5570
 
 cidade *getCidades(char *arquivo) {
     FILE *f = fopen(arquivo, "r");
