@@ -35,7 +35,7 @@ Baseado no estudo da Tabela de Dispersão, bem como em sua utilização em lingu
 #### lerArquivos.cpp    
 > Mantemos basicamente as mesmas coisas presentes no código original vindo do professor, somente alteramos as funções de apresentação de dados.
 
-###
+##
 ##### printDataItens(dataItem *dados)
 -   Para a exposição dos dados e apresentação mais coerente e visível das informações, foi feito a função printDataItens que irá dispor das informações “Identificador, Estado, Cidade, Latitude e Longitude” no terminal de maneira apresentável e identificável, na qual é passado como parâmetros os dados do arquivo .txt
 
