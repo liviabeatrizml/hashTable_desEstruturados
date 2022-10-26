@@ -6,7 +6,7 @@
 #include <stdlib.h>
 #include <math.h>
 
-#define SIZE 5570
+#define SIZE 10570
 #define divs 2
 
 typedef dataItem *hash[SIZE];
@@ -19,15 +19,16 @@ dataItem *createDummy(){
 }
 
 // void ocupadoTabela(hash &H){
-//     int i, cont = 0;
-//    
-//     for (i = 0; i < MAX; i++){
+//     int i, tam, cont = 0;
+//   
+//     for (i = 0; i < SIZE; i++){
 //         if(H[i] != NULL && H[i]->key != -1){
 //             cont++;
 //         }
 //     }
 //    
-//     printf("\n\t- %d posicoes da tabela ocupada, ou %d%%!!!\n\n", cont, (cont/MAX)*100);
+//     tam = SIZE;
+//     printf("\n\t- %d posicoes da tabela ocupada, ou %.1f%%!!!\n\n", cont, ((float)cont/(float)tam)*100);
 // }
 
 void init(hash &H) {
