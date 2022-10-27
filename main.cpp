@@ -4,11 +4,11 @@ int main(){
     hash H;
     init(H);
 
-    // ocupadoTabela(H);
+    // porcentTable(H);
 
     inserirTodos(H, divisao);
 
-    // ocupadoTabela(H);
+    // porcentTable(H);
 
     remover(H, buscar(H, 110001, divisao), divisao);
     buscar(H, 120001, divisao);

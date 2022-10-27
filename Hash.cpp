@@ -18,18 +18,18 @@ dataItem *createDummy(){
     dummy->key = -1;
 }
 
-// void ocupadoTabela(hash &H){
-//     int i, tam, cont = 0;
-//   
-//     for (i = 0; i < SIZE; i++){
-//         if(H[i] != NULL && H[i]->key != -1){
-//             cont++;
-//         }
-//     }
-//    
-//     tam = SIZE;
-//     printf("\n\t- %d posicoes da tabela ocupada, ou %.1f%%!!!\n\n", cont, ((float)cont/(float)tam)*100);
-// }
+void porcentTable(hash &H){
+    int i, tam, cont = 0;
+  
+    for (i = 0; i < SIZE; i++){
+        if(H[i] != NULL && H[i]->key != -1){
+            cont++;
+        }
+    }
+   
+    tam = SIZE;
+    printf("\n\t- %d posicoes da tabela ocupada, ou %.1f%%!!!\n\n", cont, ((float)cont/(float)tam)*100);
+}
 
 void init(hash &H) {
     for (int i = 0; i < SIZE; i++) {
