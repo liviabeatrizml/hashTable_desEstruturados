@@ -39,9 +39,13 @@ Baseado no estudo da Tabela de Dispersão, bem como em sua utilização em lingu
 ##### printDataItens(dataItem *dados)
 -   Para a exposição dos dados e apresentação mais coerente e visível das informações, foi feito a função printDataItens que irá dispor das informações “Identificador, Estado, Cidade, Latitude e Longitude” no terminal de maneira apresentável e identificável, na qual é passado como parâmetros os dados do arquivo .txt
 
+![printItens](components/printDataItens_01.png)
+
 ##
 ##### saveDataItens(dataItem *dados)
 - A função saveDataItens irá salvar as informações organizadas em um arquivo .txt, como uma forma de um arquivo auxiliar. Foi pelo foden(“dados.dat”, “w”) que os dados foram escritos e direcionados.
+
+![saveItens](components/saveDataItens_01.png)
 
 ##
 #### Hash.cpp    
@@ -50,12 +54,14 @@ Baseado no estudo da Tabela de Dispersão, bem como em sua utilização em lingu
 ##
 ##### contagem(int num)
 - Função que realiza a contagem dos valores a serem manipulados na função dobra. Enquanto o **num** (correspondente à **key**) for diferente de zero haverá a divisão por dez, com o incremento da variável **cont**, responsável por fazer a contagem dos elementos.
+
 ![Contagem](components/contagem_01.png)
 >Ou seja, para o exemplo do número relativo a key “431041” será realizado a divisão inteira sucessiva por dez (431041/10; 43104/10, 4310/10; …) até o final da contagem dos algarismos.
 
 ##
 ##### inverte(int num)
 - Função que realiza a inversão de valores necessários para a dobra. Enquanto o número (num) que se deseja inverter for maior que zero, a variável invt realiza o resultado da operação de cada algarismo a ser invertido.
+
 ![Inverte](components/inverte_01.png)
 
 ##
@@ -97,7 +103,9 @@ Depois disso, a variável **totalAlgarismos** chama a função que realiza a con
 ##
 ##### inserir(hash H, dataItem *d, int (*funcHash)(dataItem *))
 - A função inserir irá receber 3 parâmetros:
+
 ![Inserir](components/inserir_01.png)
+
 	- A tabela Hash, onde iremos adicionar as cidades;
 	- Os dados das cidades, que são fruto do nosso banco de dados;
 	- A função que será utilizada para conseguir a key e inserir na tabela Hash. Sejam elas:
