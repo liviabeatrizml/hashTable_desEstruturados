@@ -23,7 +23,7 @@ Baseado no estudo da Tabela de Dispersão, bem como em sua utilização em lingu
 		-   main.cpp - Modificamos o arquivo para adicionar todas as cidades na tabela Hash.
 
 ## :computer: Desenvolvimento e explicação dos códigos: 
-#### bancoDeDadosTemp    
+#### :open_file_folder: bancoDeDadosTemp    
 > Para facilitar o teste das funções do nosso código, organizamos em outra pasta um banco de dados temporário para teste, no intuito de diminuir o número de dados para a análise.
 
 -   Ao invés de utilizarmos o banco de dados disponibilizado pelo professor que contém cerca de 5570 cidades para fazermos os testes das aplicações, criamos um segundo banco de dados contendo apenas 10 cidades escolhidas a dedo.  
