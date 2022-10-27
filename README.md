@@ -32,17 +32,17 @@ Baseado no estudo da Tabela de Dispersão, bem como em sua utilização em lingu
 ![BancoDeDados](components/bancoDeDados_01.png)
 
 ##
-#### lerArquivos.cpp    
+#### :card_index_dividers: lerArquivos.cpp    
 > Mantemos basicamente as mesmas coisas presentes no código original vindo do professor, somente alteramos as funções de apresentação de dados.
 
 ##
-##### printDataItens(dataItem *dados)
+##### :clipboard: printDataItens(dataItem *dados)
 -   Para a exposição dos dados e apresentação mais coerente e visível das informações, foi feito a função printDataItens que irá dispor das informações “Identificador, Estado, Cidade, Latitude e Longitude” no terminal de maneira apresentável e identificável, na qual é passado como parâmetros os dados do arquivo .txt
 
 ![printItens](components/printDataItens_01.png)
 
 ##
-##### saveDataItens(dataItem *dados)
+##### :clipboard: saveDataItens(dataItem *dados)
 - A função saveDataItens irá salvar as informações organizadas em um arquivo .txt, como uma forma de um arquivo auxiliar. Foi pelo foden(“dados.dat”, “w”) que os dados foram escritos e direcionados.
 
 ![saveItens](components/saveDataItens_01.png)
@@ -93,7 +93,7 @@ Depois disso, a variável **totalAlgarismos** chama a função que realiza a con
 ![Dobra](components/dobra_04.png)
 
 ##
-##### createDummy()
+##### :robot: createDummy()
 - No momento de removermos uma cidade da tabela Hash que é fruto de uma colisão pode ocorrer de quando a removermos perdemos a localização de uma próxima cidade, cidade essa que é fruto da mesma colisão e está localizada após (SONDAGEM LINEAR) a outra removida.
 
 ![Dummy](components/dummy_01.png)
@@ -101,7 +101,7 @@ Depois disso, a variável **totalAlgarismos** chama a função que realiza a con
 -   Por isso, ao invés de limparmos totalmente aquele ponto, colocamos uma cidade fictícia/sem importância dentro dela, mas isso não impede que outra cidade seja inserida nessa posição.
 
 ##
-##### inserir(hash H, dataItem *d, int (*funcHash)(dataItem *))
+##### :heavy_check_mark: inserir(hash H, dataItem *d, int (*funcHash)(dataItem *))
 - A função inserir irá receber 3 parâmetros:
 
 ![Inserir](components/inserir_01.png)
@@ -143,9 +143,11 @@ Depois disso, a variável **totalAlgarismos** chama a função que realiza a con
 - Por fim, caso nenhuma das etapas anteriores não sejam executadas, é retornado um “erro” (return -1).
 
 ##
-##### remover(hash H, dataItem *d, int (*funcHash)(dataItem *))
+##### :x: remover(hash H, dataItem *d, int (*funcHash)(dataItem *))
 - A função remover irá receber 3 parâmetros:
+
 ![Remover](components/remover_01.png)
+
 	- A tabela Hash, onde iremos remover a cidade; 
 	-  Os dados das cidades, que são fruto do nosso banco de dados;
     - A função que será utilizada para conseguir a key e remover da tabela Hash. Sejam elas:
@@ -168,9 +170,11 @@ Depois disso, a variável **totalAlgarismos** chama a função que realiza a con
 - Caso nenhum dos processos acima seja executado, ou seja, o elemento não seja encontrado, é retornado um “erro” **(return -1)**.
 
 ##
-##### buscar(hash H, int key, int (*funcHash)(dataItem *))
+##### :mag: buscar(hash H, int key, int (*funcHash)(dataItem *))
 - A função buscar irá receber 3 parâmetros:
+
 ![Buscar](components/buscar_01.png)
+
 	- A tabela Hash, onde iremos remover a cidade;
 	- O ID/Key da cidade a ser buscada na tabela Hash;
 	- A função que será utilizada para conseguir a key para comparar com o ID da cidade buscada. Seja as funções:
@@ -195,7 +199,7 @@ Depois disso, a variável **totalAlgarismos** chama a função que realiza a con
 
 ![Buscar](components/buscar_05.png)
 
-##
+####
 ##### main.cpp
 > Utilizamos esse arquivo como uma interface do nosso código.
 
