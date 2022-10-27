@@ -54,28 +54,29 @@ Baseado no estudo da Tabela de Dispersão, bem como em sua utilização em lingu
 
 ##### somaR(int num1, int num2)
 - Função que soma os elementos da dobra de acordo com as restrições da função, ou seja, para resultados de soma com duas casas decimais o número contido na casa das dezenas é ignorado na próxima soma.
+
 ![Soma](components/somaR_01.png)
 
 ##### dobra(dataItem *d)
 - Realiza a inserção do elemento na hash utilizando o método de dobra, ou seja, a alocação da cidade na tabela ocorre a partir do código (key) do município que se deseja inserir.
 - Na inserção de cada elemento ocorre a entrada na função **dobra**, esse método recebe como parâmetro um ponteiro **(*d)** que aponta para o **typedef** **dataItem**  referente à tabela **hash**.
 
- ![Dobra](components/Dobra_01.png)
+ ![Dobra](components/dobra_01.png)
  
 - Logo após, a variável **key** recebe o código relativo a primeira cidade que deve ser inserida, de acordo com o que está sendo expresso no arquivo contido dentro da pasta **bancoDeDados**.
 
 Depois disso, a variável **totalAlgarismos** chama a função que realiza a contagem dos elementos da **key**. Posteriormente, será atribuído o valor de **cont** a variável **totalAlgarismos**.
 
-![Dobra](components/Dobra_02.png)
+![Dobra](components/dobra_02.png)
 
 - Em seguida é feita a divisão da quantidade de algarismos por 2. A variável process recebe o resultado da divisão. A variável **aux** armazena os dois primeiros elementos da **key**. Após isso, acontece a troca dos elementos através da chamada função **inverte**.
 
-![Dobra](components/Dobra_03.png)
+![Dobra](components/dobra_03.png)
 
 - Para que se efetive todo o desenvolvimento da dobra, o while identifica enquanto o processo for diferente de 1. Dessa forma, será atribuída à key a remoção dos elementos da dobra até que seja efetuado toda a execução da soma.
 - Para isso, a variável **num1** armazena o primeiro par com algarismos invertidos a serem somados com a variável **num2**, que arquiva o par seguinte. Logo após será realizado a soma dos valores armazenados através da função **somaR**, até ser retornado o valor de **num1**, a operação será realizada sucessivas vezes até o final da dobra. Por fim, a **key** armazena a posição da tabela resultado da soma.
 
-![Dobra](components/Dobra_04.png)
+![Dobra](components/dobra_04.png)
 
 ##### createDummy()
 - No momento de removermos uma cidade da tabela Hash que é fruto de uma colisão pode ocorrer de quando a removermos perdemos a localização de uma próxima cidade, cidade essa que é fruto da mesma colisão e está localizada após (SONDAGEM LINEAR) a outra removida.
@@ -166,7 +167,6 @@ Depois disso, a variável **totalAlgarismos** chama a função que realiza a con
 ![Buscar](components/buscar_03.png)
 
 - Com isso, obtemos uma chave que será utilizada com índice da tabela e possivelmente localizá-la depois.
-- 
 ![Buscar](components/buscar_04.png)
 
 -   Com um **while** fazemos a busca na tabela Hash até encontrarmos um item vazio, pois se chegou até ali significa que algo está errado e encerra a procura. No entanto, caso a cidade seja encontrada, o dataItem que criamos anteriormente irá receber a cidade da tabela Hash no momento e retorna-la, provando que a cidade está sim na tabela Hash.   
