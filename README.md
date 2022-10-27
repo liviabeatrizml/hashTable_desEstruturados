@@ -31,32 +31,40 @@ Baseado no estudo da Tabela de Dispersão, bem como em sua utilização em lingu
 
 ![BancoDeDados](components/bancoDeDados_01.png)
 
+##
 #### lerArquivos.cpp    
 > Mantemos basicamente as mesmas coisas presentes no código original vindo do professor, somente alteramos as funções de apresentação de dados.
 
+##
 ##### printDataItens(dataItem *dados)
 -   Para a exposição dos dados e apresentação mais coerente e visível das informações, foi feito a função printDataItens que irá dispor das informações “Identificador, Estado, Cidade, Latitude e Longitude” no terminal de maneira apresentável e identificável, na qual é passado como parâmetros os dados do arquivo .txt
 
+##
 ##### saveDataItens(dataItem *dados)
 - A função saveDataItens irá salvar as informações organizadas em um arquivo .txt, como uma forma de um arquivo auxiliar. Foi pelo foden(“dados.dat”, “w”) que os dados foram escritos e direcionados.
 
+##
 #### Hash.cpp    
 - No arquivo Hash.cpp criamos funções necessária para a implementação de um novo método de inserção de elementos na Tabela Hash, a DOBRA, e também atualizamos todas as funções para se adequar a forma de tratamento de colisão de maneira aberta, a SONDAGEM LINEAR.
 
+##
 ##### contagem(int num)
 - Função que realiza a contagem dos valores a serem manipulados na função dobra. Enquanto o **num** (correspondente à **key**) for diferente de zero haverá a divisão por dez, com o incremento da variável **cont**, responsável por fazer a contagem dos elementos.
 ![Contagem](components/contagem_01.png)
 >Ou seja, para o exemplo do número relativo a key “431041” será realizado a divisão inteira sucessiva por dez (431041/10; 43104/10, 4310/10; …) até o final da contagem dos algarismos.
 
+##
 ##### inverte(int num)
 - Função que realiza a inversão de valores necessários para a dobra. Enquanto o número (num) que se deseja inverter for maior que zero, a variável invt realiza o resultado da operação de cada algarismo a ser invertido.
 ![Inverte](components/inverte_01.png)
 
+##
 ##### somaR(int num1, int num2)
 - Função que soma os elementos da dobra de acordo com as restrições da função, ou seja, para resultados de soma com duas casas decimais o número contido na casa das dezenas é ignorado na próxima soma.
 
 ![Soma](components/somaR_01.png)
 
+##
 ##### dobra(dataItem *d)
 - Realiza a inserção do elemento na hash utilizando o método de dobra, ou seja, a alocação da cidade na tabela ocorre a partir do código (key) do município que se deseja inserir.
 - Na inserção de cada elemento ocorre a entrada na função **dobra**, esse método recebe como parâmetro um ponteiro **(*d)** que aponta para o **typedef** **dataItem**  referente à tabela **hash**.
@@ -78,6 +86,7 @@ Depois disso, a variável **totalAlgarismos** chama a função que realiza a con
 
 ![Dobra](components/dobra_04.png)
 
+##
 ##### createDummy()
 - No momento de removermos uma cidade da tabela Hash que é fruto de uma colisão pode ocorrer de quando a removermos perdemos a localização de uma próxima cidade, cidade essa que é fruto da mesma colisão e está localizada após (SONDAGEM LINEAR) a outra removida.
 
@@ -85,6 +94,7 @@ Depois disso, a variável **totalAlgarismos** chama a função que realiza a con
 
 -   Por isso, ao invés de limparmos totalmente aquele ponto, colocamos uma cidade fictícia/sem importância dentro dela, mas isso não impede que outra cidade seja inserida nessa posição.
 
+##
 ##### inserir(hash H, dataItem *d, int (*funcHash)(dataItem *))
 - A função inserir irá receber 3 parâmetros:
 ![Inserir](components/inserir_01.png)
@@ -124,6 +134,7 @@ Depois disso, a variável **totalAlgarismos** chama a função que realiza a con
 
 - Por fim, caso nenhuma das etapas anteriores não sejam executadas, é retornado um “erro” (return -1).
 
+##
 ##### remover(hash H, dataItem *d, int (*funcHash)(dataItem *))
 - A função remover irá receber 3 parâmetros:
 ![Remover](components/remover_01.png)
@@ -148,6 +159,7 @@ Depois disso, a variável **totalAlgarismos** chama a função que realiza a con
 
 - Caso nenhum dos processos acima seja executado, ou seja, o elemento não seja encontrado, é retornado um “erro” **(return -1)**.
 
+##
 ##### buscar(hash H, int key, int (*funcHash)(dataItem *))
 - A função buscar irá receber 3 parâmetros:
 ![Buscar](components/buscar_01.png)
@@ -175,6 +187,7 @@ Depois disso, a variável **totalAlgarismos** chama a função que realiza a con
 
 ![Buscar](components/buscar_05.png)
 
+##
 ##### main.cpp
 > Utilizamos esse arquivo como uma interface do nosso código.
 
