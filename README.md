@@ -48,8 +48,13 @@ Baseado no estudo da Tabela de Dispersão, bem como em sua utilização em lingu
 ![saveItens](components/saveDataItens_01.png)
 
 ##
-#### [:bookmark_tabs::pen:] Hash.cpp
+#### [:bookmark_tabs:] Hash.cpp
 - No arquivo Hash.cpp criamos funções necessária para a implementação de um novo método de inserção de elementos na Tabela Hash, a DOBRA, e também atualizamos todas as funções para se adequar a forma de tratamento de colisão de maneira aberta, a SONDAGEM LINEAR.
+
+##
+##### [:free:] porcentTable(hash &H)
+-  Função que realiza o cálculo de ocupação da tabela, mostrando a porcentagem e a quantidade de posições ocupadas por cidades na tabela Hash. O cálculo é feito com base em um contador que verifica cada posição da tabela e ver se ela está ocupada ou não, no final é apresentado esse dado.
+![Contagem](components/porcentTable_01.png)
 
 ##
 ##### [:1234:] contagem(int num)
