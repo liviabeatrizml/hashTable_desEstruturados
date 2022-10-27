@@ -48,30 +48,30 @@ Baseado no estudo da Tabela de Dispersão, bem como em sua utilização em lingu
 ![saveItens](components/saveDataItens_01.png)
 
 ##
-#### Hash.cpp    
+#### :bookmark_tabs: :pen: Hash.cpp    
 - No arquivo Hash.cpp criamos funções necessária para a implementação de um novo método de inserção de elementos na Tabela Hash, a DOBRA, e também atualizamos todas as funções para se adequar a forma de tratamento de colisão de maneira aberta, a SONDAGEM LINEAR.
 
 ##
-##### contagem(int num)
+##### :1234: contagem(int num)
 - Função que realiza a contagem dos valores a serem manipulados na função dobra. Enquanto o **num** (correspondente à **key**) for diferente de zero haverá a divisão por dez, com o incremento da variável **cont**, responsável por fazer a contagem dos elementos.
 
 ![Contagem](components/contagem_01.png)
 >Ou seja, para o exemplo do número relativo a key “431041” será realizado a divisão inteira sucessiva por dez (431041/10; 43104/10, 4310/10; …) até o final da contagem dos algarismos.
 
 ##
-##### inverte(int num)
+##### :arrows_counterclockwise: inverte(int num)
 - Função que realiza a inversão de valores necessários para a dobra. Enquanto o número (num) que se deseja inverter for maior que zero, a variável invt realiza o resultado da operação de cada algarismo a ser invertido.
 
 ![Inverte](components/inverte_01.png)
 
 ##
-##### somaR(int num1, int num2)
+##### :heavy_plus_sign: somaR(int num1, int num2)
 - Função que soma os elementos da dobra de acordo com as restrições da função, ou seja, para resultados de soma com duas casas decimais o número contido na casa das dezenas é ignorado na próxima soma.
 
 ![Soma](components/somaR_01.png)
 
 ##
-##### dobra(dataItem *d)
+##### :curly_loop: dobra(dataItem *d)
 - Realiza a inserção do elemento na hash utilizando o método de dobra, ou seja, a alocação da cidade na tabela ocorre a partir do código (key) do município que se deseja inserir.
 - Na inserção de cada elemento ocorre a entrada na função **dobra**, esse método recebe como parâmetro um ponteiro **(*d)** que aponta para o **typedef** **dataItem**  referente à tabela **hash**.
 
