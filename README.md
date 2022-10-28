@@ -8,11 +8,11 @@
 
 
 ## Hash Table (Tabela de Dispersão)
-> Uma Tabela de Dispersão ou Hash é uma estrutura de dados, semelhante a vetor de elementos, que associa seus dados a chaves específicas para facilitar na sua busca. Por meio dessa tabela também torna-se possível inserir e remover os elementos nela contidos. A utilização da estrutura hash tem como propósito fundamental realizar busca de dados de maneira constante (complexidade O(1)), mas isso nem sempre é possível, pois no momento de inserção de diversos elementos na tabela há grandes chances de haver colisões, o que altera a complexidade para O(n), semelhante a de uma lista.   
+> Uma Tabela de Dispersão ou Hash é uma estrutura de dados, semelhante a um vetor de elementos, que associa seus dados a chaves específicas para facilitar na sua busca. Por meio dessa tabela também torna-se possível inserir e remover os elementos nela contidos. A utilização da estrutura hash tem como propósito fundamental realizar a busca de dados de maneira constante (complexidade O(1)), mas isso nem sempre é possível, pois no momento de inserção de diversos elementos na tabela há grandes chances de haver colisões, o que altera a complexidade para O(n), semelhante a de uma lista.   
 
-Baseado no estudo da Tabela de Dispersão, bem como em sua utilização em linguagem C++, implementou-se uma pasta contendo os arquivos necessários para buscar, inserir e remover cidades brasileiras baseadas nas localidades. Nesse sentido, a fim de tratar as possíveis colisões previstas, visto a gama de municípios, fez-se o uso do endereçamento aberto através da sondagem linear. Dessa forma, o espaço fica alocado de uma forma eficiente. No entanto, a sondagem linear, uma vez que procura adicionar um elemento na primeira posição livre seguinte, também prejudica o desempenho da busca quando se elimina um determinado elemento, mas esse problema pode ser resolvido. 
+Baseado no estudo da Tabela de Dispersão, bem como em sua utilização em linguagem C++, implementou-se uma pasta contendo os arquivos necessários para buscar, inserir e remover cidades brasileiras baseadas nas localidades. Nesse sentido, a fim de tratar as possíveis colisões previstas, visto a gama de municípios, fez-se o uso do endereçamento aberto através da sondagem linear. Dessa forma, a alocação do espaço ocorre de forma eficiente. No entanto, a sondagem linear, uma vez que procura adicionar um elemento na primeira posição livre seguinte, também prejudica o desempenho da busca quando se elimina um determinado elemento, mas esse problema pode ser resolvido. 
 
- -  Alteração no código pré-determinado pelo professor
+ -  Quanto à alteração no código pré-determinado pelo professor:
 	-   Arquivos não alterados
 	    -   bancoDeDados - Mantemos as mesmas informações das cidades;
 	    -   cidade.cpp - Não alteramos nada nesse arquivo para mantermos a mesma estrutura dada pelo professor.
@@ -26,14 +26,14 @@ Baseado no estudo da Tabela de Dispersão, bem como em sua utilização em lingu
 #### [:open_file_folder:] bancoDeDadosTemp    
 > Para facilitar o teste das funções do nosso código, organizamos em outra pasta um banco de dados temporário para teste, no intuito de diminuir o número de dados para a análise.
 
--   Ao invés de utilizarmos o banco de dados disponibilizado pelo professor que contém cerca de 5570 cidades para fazermos os testes das aplicações, criamos um segundo banco de dados contendo apenas 10 cidades escolhidas a dedo.  
--   As cidades escolhidas para fazermos os testes, se encaixam em todas as situações que o nosso código promete resolver, seja inserir, remover ou buscar cidades na tabela HASH, ou até mesmo tratar colisões no momento de inserção de elementos.
+-   Ao invés de utilizarmos o banco de dados disponibilizado pelo professor que contém cerca de 5570 cidades, para fazermos os testes das aplicações criamos um segundo banco de dados contendo apenas 10 cidades escolhidas a dedo.  
+-   As cidades escolhidas para fazermos os testes se encaixam em todas as situações que o nosso código promete resolver, seja inserir, remover ou buscar cidades na tabela HASH, ou até mesmo tratar colisões no momento de inserção de elementos.
 
 ![BancoDeDados](components/bancoDeDados_01.png)
 
 ##
 #### [:card_index_dividers:] lerArquivos.cpp   
-> Mantemos basicamente as mesmas coisas presentes no código original vindo do professor, somente alteramos as funções de apresentação de dados.
+> A grosso modo, mantemos o código original disponibilizado pelo professor, somente alteramos as funções de apresentação de dados.
 
 ##
 ##### [:clipboard:] printDataItens(dataItem *dados)
