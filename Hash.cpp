@@ -130,7 +130,7 @@ int inserir(hash H, dataItem *d, int (*funcHash)(dataItem *)) {
 
     key = key > SIZE ? key % SIZE : key;
 
-    if (H[key] == NULL) {
+    if (H[key] == NULL || H[key]->key == -1) {
         H[key] = copy;
         return 0;
     }
